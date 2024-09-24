@@ -1,0 +1,64 @@
+/* Navigation Bar Section */
+.navbar {
+    position: fixed;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 20px 10px;
+    background-color: #772721;
+    color: #fff;
+    width: 100%;
+    z-index: 999;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar-links .active {
+    color: #fff;
+}
+
+.navbar-links li a {
+    font-size: 14px;
+    font-family: "Raleway", sans-serif;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+    letter-spacing: 2px;
+
+}
+
+.navbar-links li a:hover {
+    color: #cecece;
+}
+
+.logo-navbar {
+    width: 40px;
+    height: auto;
+    position: absolute;
+    left: 10px;
+}
+
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    .navbar-links li {
+        width: 100%;
+        text-align: left;
+    }
+}
