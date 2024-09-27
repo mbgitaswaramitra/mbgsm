@@ -1,0 +1,252 @@
+  /*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+  #main {
+      margin: 0 auto;
+      padding: 0;
+  }
+
+  body {
+      font-family: "DM Sans";
+      scroll-behavior: smooth;
+  }
+
+  ::-webkit-scrollbar {
+      display: none;
+  }
+
+  a {
+      color: #062a87;
+      text-decoration: none;
+  }
+
+  a:hover {
+      color: #062a87;
+      text-decoration: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+      font-family: "DM Sans";
+      color: #444444;
+  }
+
+
+  /*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+  section {
+      padding: 50px 0;
+  }
+
+  .section-title {
+      padding: 20px 0;
+      position: relative;
+  }
+
+  .section-title h2 {
+      text-align: center;
+      font-family: "DM Sans";
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+      padding-bottom: 0;
+      color: #444444;
+      position: relative;
+      z-index: 1;
+  }
+
+  .section-title h3 {
+      font-family: "DM Sans";
+      font-size: 30px;
+      font-weight: 700;
+      font-style: italic;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+  }
+
+  .section-title p {
+      font-size: 17px;
+      font-family: "DM Sans";
+      margin-bottom: 0;
+      position: relative;
+      z-index: 2;
+      text-align: justify;
+  }
+
+  .section-title span {
+      position: absolute;
+      top: 30px;
+      color: #eef0f2;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      font-weight: 700;
+      font-size: 52px;
+      text-transform: uppercase;
+      line-height: 0;
+  }
+
+  @media (max-width: 575px) {
+      .section-title h2 {
+          font-size: 28px;
+          margin-bottom: 15px;
+      }
+
+      .section-title h3 {
+          text-align: center;
+      }
+
+      .section-title span {
+          font-size: 38px;
+      }
+  }
+
+  /*------------------------------------------------
+  # Formulir
+  ----------------------------------------------- */
+
+  .formulir {
+      padding: 60px;
+  }
+
+  .form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 10px;
+      background-color: #ffffff;
+      padding: 20px;
+      position: relative;
+  }
+
+  .bordering {
+      opacity: 0;
+      transform: translateY(100px);
+      transition: opacity 1s ease, transform 1s ease;
+      width: 100%;
+      margin: 0 auto;
+      padding: 10px;
+      border-radius: 9px;
+      position: relative;
+  }
+
+  .bordering.animated {
+      opacity: 1;
+      transform: translateY(0);
+  }
+
+  .form label {
+      position: relative;
+  }
+
+  .form label .input {
+      width: 100%;
+      padding: 10px 10px 20px 10px;
+      outline: 0;
+      border: 1px solid rgba(105, 105, 105, 0.397);
+      border-radius: 10px;
+  }
+
+  .form label .input+span {
+      position: absolute;
+      left: 10px;
+      color: grey;
+      font-size: 0.9em;
+      cursor: text;
+      transition: 0.3s ease;
+  }
+
+  .form label .input:placeholder-shown+span {
+      top: 15px;
+      font-size: 1em;
+  }
+
+  .form label .input:focus+span,
+  .form label .input:valid+span {
+      top: 30px;
+      font-size: 0.5em;
+      font-weight: 600;
+      color: #E72929;
+  }
+
+  .submit {
+      cursor: pointer;
+      border: none;
+      background-color: #8B322C;
+      padding: 10px;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: 0.3s ease;
+  }
+
+  .submit:hover {
+      background-color: #8B322C89;
+      transition: 0.5s ease;
+  }
+
+  .kotak-alat {
+      max-width: 100%;
+  }
+
+  .alat {
+      padding: 13px;
+      border-radius: 10px;
+      border: 1px solid #6c757d8d;
+      width: 100%;
+  }
+
+  @media (max-width: 476px) {
+
+      .img1,
+      .img-2 {
+          display: none;
+      }
+
+      .bordering {
+          width: 100%;
+          margin-bottom: 10px;
+      }
+
+      .formulir {
+          padding: 0;
+          width: 100%;
+      }
+
+      .form {
+          width: 90%;
+          border-radius: 20px;
+          padding: 1 0px;
+          margin: 0 auto;
+      }
+
+      .submit {
+          font-size: 14px;
+          width: 80%;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+      }
+  }
+
+  @keyframes pulse {
+      from {
+          transform: scale(0.9);
+          opacity: 1;
+      }
+
+      to {
+          transform: scale(1.8);
+          opacity: 0;
+      }
+  }

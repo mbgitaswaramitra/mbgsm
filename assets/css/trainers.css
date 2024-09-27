@@ -1,0 +1,181 @@
+  /*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+  #main {
+      margin: 0 auto;
+      padding: 0;
+  }
+
+  body {
+      font-family: "DM Sans";
+      scroll-behavior: smooth;
+  }
+
+  ::-webkit-scrollbar {
+      display: none;
+  }
+
+  a {
+      color: #062a87;
+      text-decoration: none;
+  }
+
+  a:hover {
+      color: #062a87;
+      text-decoration: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+      font-family: "DM Sans";
+      color: #444444;
+  }
+
+
+  /*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+  section {
+      padding: 50px 0;
+  }
+
+  .section-title {
+      padding: 20px 0;
+      position: relative;
+  }
+
+  .section-title h2 {
+      text-align: center;
+      font-family: "DM Sans";
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+      padding-bottom: 0;
+      color: #444444;
+      position: relative;
+      z-index: 1;
+  }
+
+  .section-title h3 {
+      font-family: "DM Sans";
+      font-size: 30px;
+      font-weight: 700;
+      font-style: italic;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+  }
+
+  .section-title p {
+      font-size: 17px;
+      font-family: "DM Sans";
+      margin-bottom: 0;
+      position: relative;
+      z-index: 2;
+      text-align: justify;
+  }
+
+  .section-title span {
+      position: absolute;
+      top: 30px;
+      color: #eef0f2;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      font-weight: 700;
+      font-size: 52px;
+      text-transform: uppercase;
+      line-height: 0;
+  }
+
+  @media (max-width: 575px) {
+      .section-title h2 {
+          font-size: 28px;
+          margin-bottom: 15px;
+      }
+
+      .section-title h3 {
+          text-align: center;
+      }
+
+      .section-title span {
+          font-size: 38px;
+      }
+  }
+
+  /*-------------------------------------------------------------
+# Pelatih
+-------------------------------------------------------------*/
+  .kartu {
+      opacity: 0;
+      transform: translateY(100px);
+      transition: opacity 1s ease, transform 1s ease;
+  }
+
+  .kartu.animated {
+      opacity: 1;
+      transform: translateY(0);
+  }
+
+  .container-pelatih {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+  }
+
+  .card-pelatih {
+      border-radius: 10px;
+      box-shadow: 0 4px 8px 0 #444444;
+      max-width: 300px;
+      margin: 20px;
+      text-align: center;
+      padding: 20px;
+      transition: 0.3s;
+  }
+
+  .card-pelatih:hover {
+      transform: scale(1.05);
+      transition: 0.3s;
+  }
+
+  .title,
+  h2 {
+      color: #444444;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+  }
+
+  .icon {
+      text-decoration: none;
+      font-size: 22px;
+      color: #444444;
+      margin: 0 10px;
+  }
+
+  .icon:hover {
+      color: #8B322C;
+  }
+
+  .img-avatar {
+      width: 250px;
+      height: auto;
+  }
+
+  @media (max-width: 476px) {
+      .container-pelatih {
+          flex-direction: column;
+      }
+
+      .card-pelatih {
+          width: 100%;
+          margin: 30px 0;
+      }
+  }

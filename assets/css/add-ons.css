@@ -1,0 +1,206 @@
+  /*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+  #main {
+      margin: 0 auto;
+      padding: 0;
+  }
+
+  body {
+      font-family: "DM Sans";
+      scroll-behavior: smooth;
+  }
+
+  ::-webkit-scrollbar {
+      display: none;
+  }
+
+  a {
+      color: #062a87;
+      text-decoration: none;
+  }
+
+  a:hover {
+      color: #062a87;
+      text-decoration: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+      font-family: "DM Sans";
+      color: #444444;
+  }
+
+
+  /*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+  section {
+      padding: 50px 0;
+  }
+
+  .section-title {
+      padding: 20px 0;
+      position: relative;
+  }
+
+  .section-title h2 {
+      text-align: center;
+      font-family: "DM Sans";
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+      padding-bottom: 0;
+      color: #444444;
+      position: relative;
+      z-index: 1;
+  }
+
+  .section-title h3 {
+      font-family: "DM Sans";
+      font-size: 30px;
+      font-weight: 700;
+      font-style: italic;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+  }
+
+  .section-title p {
+      font-size: 17px;
+      font-family: "DM Sans";
+      margin-bottom: 0;
+      position: relative;
+      z-index: 2;
+      text-align: justify;
+  }
+
+  .section-title span {
+      position: absolute;
+      top: 30px;
+      color: #eef0f2;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      font-weight: 700;
+      font-size: 52px;
+      text-transform: uppercase;
+      line-height: 0;
+  }
+
+  @media (max-width: 575px) {
+      .section-title h2 {
+          font-size: 28px;
+          margin-bottom: 15px;
+      }
+
+      .section-title h3 {
+          text-align: center;
+      }
+
+      .section-title span {
+          font-size: 38px;
+      }
+  }
+
+  /*------------------------------------------------
+  Add-ons in HTML
+------------------------------------------------*/
+  .img-fluid {
+      border-radius: 20px;
+  }
+
+  .garis1 {
+      background-color: #8B322C;
+      border: none;
+      border-radius: 10px;
+      height: 3px;
+      opacity: 10;
+      width: 300px;
+
+  }
+
+  .garis2 {
+      border: none;
+      border-radius: 10px;
+      height: 5px;
+      background-color: #8B322C;
+      margin-right: 30%;
+      margin-left: 30%;
+      opacity: 10;
+  }
+
+  .vl {
+      border-left: 2px solid #8B322C;
+      height: 300px;
+      position: relative;
+      left: 105%;
+      margin-left: -3px;
+      margin-bottom: -330px;
+      top: -330px;
+  }
+
+  .regist {
+      font-style: italic;
+      text-decoration: underline;
+      border-radius: 12px;
+
+  }
+
+  .regist:hover {
+      color: #8B322C;
+  }
+
+  .daftar {
+      font-weight: 700;
+      font-style: italic;
+      border-radius: 20px;
+      transition: 0.5s;
+      padding: 10px;
+
+  }
+
+  .img-1 {
+      width: 60px;
+      height: auto;
+      position: absolute;
+      right: 55px;
+      top: 15px;
+  }
+
+  .img-2 {
+      width: 50px;
+      height: auto;
+      position: absolute;
+      right: 0;
+      top: 20px;
+  }
+
+
+  .daftar:hover {
+      color: #d4493f;
+  }
+
+  @media (max-width: 500px) {
+      .vl {
+          display: none;
+      }
+
+      .garis1 {
+          text-align: center;
+          left: 0;
+          right: 0;
+          width: 100%;
+      }
+
+      .img-1,
+      .img-2 {
+          display: none;
+      }
+  }
