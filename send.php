@@ -14,9 +14,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $kelas = $_POST["kelas"];
     $number = $_POST["number"];
     $reason = $_POST["reason"];
-    $pernah = $_POST["pernah"];
-    $belum = $_POST["belum"];
-    $alat = $_POST ["alat"];    
+    $pilih_yes = $_POST["pilih_yes"];
+    $pilih_no = $_POST["pilih_no"];
+    $alat = $_POST["alat"];    
     
     $mail = new PHPMailer(true);
 
@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->addAddress('mbgitaswaramitra.gsm@gmail.com'); // Recipient's email
 
         $mail->isHTML();
-        $mail->Subject = 'Anggota Telah Mengirim Data' . $name;
+        $mail->Subject = 'Anggota Telah Mengirim Data ' . $name;
         $mail->Body ="
                         Nama : $name 
                         <br>
@@ -42,9 +42,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <br>
                         Alasannya : $reason 
                         <br>    
-                        Pernah :$pernah
+                        Pernah Ikut Kegiatan MB :$pilih_yes
                         <br> 
-                        Belum : $belum
+                        Belum Pernah Ikut Kegiatan MB : $pilih_no
                         <br>    
                         Alat Yang Pernah Dipakai : $alat
                         ";
