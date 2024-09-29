@@ -14,8 +14,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $kelas = $_POST["kelas"];
     $number = $_POST["number"];
     $reason = $_POST["reason"];
-    $pilih_yes = $_POST["pilih_yes"];
-    $pilih_no = $_POST["pilih_no"];
+    $pilih = $_POST["pilih"];
+    $pilih = $_POST["pilih"];
     $alat = $_POST["alat"];    
     
     $mail = new PHPMailer(true);
@@ -42,9 +42,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <br>
                         Alasannya : $reason 
                         <br>    
-                        Pernah Ikut Kegiatan MB :$pilih_yes
+                        Pernah Ikut Kegiatan MB :$pilih
                         <br> 
-                        Belum Pernah Ikut Kegiatan MB : $pilih_no
+                        Belum Pernah Ikut Kegiatan MB : $pilih
                         <br>    
                         Alat Yang Pernah Dipakai : $alat
                         ";
