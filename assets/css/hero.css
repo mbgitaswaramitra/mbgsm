@@ -183,6 +183,7 @@ section {
   }
 
   #hero {
+    background-image: url('../img/hero-bg.jpg');
     height: 100vh;
     background-attachment: fixed;
     background-size: cover;
