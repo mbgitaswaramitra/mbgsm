@@ -356,7 +356,7 @@
             text: "Form berhasil dikirim!",
             confirmButtonText: "OK",
           }).then(() => {
-            form.reset(); // Reset form jika diperlukan
+            window.location.reload();
           });
         } else {
           // Jika ada error dari server
