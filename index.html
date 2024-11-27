@@ -324,18 +324,62 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <script src="https://kit.fontawesome.com/8e52fd1cc1.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-  <script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbyIX7qRJ-pIol3MmqRVqFk5jJcnTiE3IfWV-88QXsVW_v3HVK6qgyT6XCS1VegHzaTVzQ/exec'
-  const form = document.forms['data-new-member']
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector("form[name='data-new-member']");
+    
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault(); // Mencegah pengiriman form default
+      
+      // Ambil data dari form
+      const formData = new FormData(form);
+      const formObject = Object.fromEntries(formData.entries());
 
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
-  })
+      try {
+        // Kirim data dengan fetch (simulasi pengiriman data ke server)
+        const response = await fetch("https://example.com/api/submit", { // Ganti URL dengan endpoint server Anda
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formObject),
+        });
+
+        if (response.ok) {
+          // Jika sukses
+          Swal.fire({
+            icon: "success",
+            title: "Berhasil",
+            text: "Form berhasil dikirim!",
+            confirmButtonText: "OK",
+          }).then(() => {
+            form.reset(); // Reset form jika diperlukan
+          });
+        } else {
+          // Jika ada error dari server
+          const errorMessage = await response.text();
+          Swal.fire({
+            icon: "error",
+            title: "Gagal",
+            text: `Form gagal dikirim: ${errorMessage}`,
+            confirmButtonText: "OK",
+          });
+        }
+      } catch (error) {
+        // Jika terjadi error saat koneksi
+        Swal.fire({
+          icon: "error",
+          title: "Gagal",
+          text: "Terjadi kesalahan, silakan coba lagi nanti.",
+          confirmButtonText: "OK",
+        });
+      }
+    });
+  });
 </script>
+
 </body>
 
 </html>
