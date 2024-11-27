@@ -200,7 +200,7 @@
 <section id="formulir" class="formulir">
   <div class="container">
     <div class="bordering">
-      <form name="Data Anggota Baru" data-netlify="true" class="form" action="https://script.google.com/macros/s/AKfycbyIX7qRJ-pIol3MmqRVqFk5jJcnTiE3IfWV-88QXsVW_v3HVK6qgyT6XCS1VegHzaTVzQ/exec" method="post" autocomplete="off">
+      <form name='dataNewMember' data-netlify="true" class="form" method="post" autocomplete="off">
 
         <div class="section-title">
           <h3 class="title-form">Register Form</h3>
@@ -320,6 +320,17 @@
   <script src="assets/js/main.js"></script>
   <script src="https://kit.fontawesome.com/8e52fd1cc1.js" crossorigin="anonymous"></script>
 
+  <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyIX7qRJ-pIol3MmqRVqFk5jJcnTiE3IfWV-88QXsVW_v3HVK6qgyT6XCS1VegHzaTVzQ/exec'
+  const form = document.forms['dataNewMember']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
 </body>
 
 </html>
